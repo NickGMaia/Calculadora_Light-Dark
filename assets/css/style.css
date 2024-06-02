@@ -1,0 +1,166 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.5s ease;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    background: rgba(255, 153, 1, 1.0);
+    background: radial-gradient(at left center, rgba(255, 153, 1, 1.0), rgba(77, 1, 89, 1.0));
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.calculator {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #06ebcc;
+}
+
+.theme-toggler {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.theme-toggler.active {
+    color: #333;
+}
+
+.theme-toggler.active::before {
+    background-color: #fff;
+}
+
+.theme-toggler::before {
+    content: '';
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #333;
+    z-index: -1;
+}
+
+#display {
+    margin: 0 10px;
+    height: 50px;
+    border-radius: 20px;
+    width: auto;
+    max-width: 270px;
+    padding-right: 5px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-top: 90px;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+}
+
+#display::-webkit-scrollbar {
+    display: block;
+    height: 3px;
+}
+
+button {
+    height: 50px;
+    width: 50px;
+    border: none;
+    background: none;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 200ms ease;
+    border-radius: 20px;
+}
+
+button:hover {
+    transform: scale(1.15);
+    border: solid 1px;
+    transition: all 0.5s ease;
+}
+
+button#equal {
+    height: 100px;
+}
+
+table {
+    border-top: solid 2px black;
+}
+
+
+/* Tema Escuro */
+
+.calculator.dark {
+    background: rgba(14, 1, 81, 1.0);
+    background: radial-gradient(at center, rgba(14, 1, 81, 1.0), rgba(77, 1, 89, 1.0));
+}
+
+.calculator.dark #display {
+    color: #000000;
+}
+
+.calculator.dark button#clear {
+    background-color: #000000;
+    color: rgb(231, 0, 0);
+}
+
+.calculator.dark button.btn-operator {
+    background-color: #770063;
+    color: #0a070a;
+}
+
+.calculator.dark button.btn-equal {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Tema Claro*/
+
+.calculator {
+    background: rgba(255, 153, 1, 1.0);
+    background: radial-gradient(at center, rgba(255, 153, 1, 1.0), rgba(255, 3, 3, 1.0));
+}
+
+.calculator #display {
+    color: rgb(255, 255, 255);
+}
+
+.calculator button#clear {
+    background-color: #ffb375;
+    color: #f70000;
+}
+
+.calculator button.btn-operator {
+    background-color: #ff2828;
+    color: #ffffff;
+}
+
+.calculator button.btn-equal {
+    background-color: #ffb375;
+    color: #000;
+}
